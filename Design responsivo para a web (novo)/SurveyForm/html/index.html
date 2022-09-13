@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <h1 id="title">Formulário de Pesquisa</h1>
+            <p id="description">Obrigado por dedicar seu tempo para nos responder</p>
+        </header>
+            
+        <section id="corpo">
+            <form action="post" id="survey-form">
+                <fieldset id="pessoal">
+                    <label for="name" id="name-label">Nome: <input type="text" id="name" name="name" required placeholder="Nome completo"></label>
+                    <label for="email" id="email-label">Email: <input type="email" id="email" name="email" required placeholder="Email pessoal"></label>
+                    <label for="number" id="number-label">Idade: <input type="number" id="number" name="number" min="15" max="135" placeholder="Idade"></label>
+                </fieldset>
+                <fieldset>
+                    <p>Você faz alguma faculdade ou curso sobre programação?</p>
+                    <label for="yes"><input type="radio" name="college" id="yes" value="yes" checked> Sim</label>
+                    <label for="no"><input type="radio" name="college" id="no" value="no"> Não</label>
+                    <p>Com qual linguagem você programa?</p>
+                    <label for="dropdown">
+                        <select name="dropdown" id="dropdown">
+                            <option value="0">Linguagens</option>
+                            <option value="1">Python</option>
+                            <option value="2">C#</option>
+                            <option value="3">JavaScript</option>
+                            <option value="4">Java</option>
+                            <option value="5">Prefiro não dizer</option>
+                            <option value="6">Outro</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset id="preference">
+                    <p>O que você prefere?</p>
+                    <label for="frontend_projects"><input type="checkbox" name="frontend_projects" id="frontend_projects" value="frontend_projects">Projetos Front-end</label>
+                    <label for="backend_projects"><input type="checkbox" name="backend_projects" id="backend_projects" value="backend_projects">Projetos back-end</label>
+                    <label for="data_visualization"><input type="checkbox" name="data_visualization" id="data_visualization" value="data_visualization">Visualização de dados</label>
+                    <label for="open_source_community"><input type="checkbox" name="open_source_community" id="open_source_community" value="open_source_community">Comunidade de código aberto</label>
+                    <label for="forum"><input type="checkbox" name="forum" id="forum" value="forum">Fórum</label>
+                    <label for="other">
+                        <input type="checkbox" name="other" id="other" value="other">Outro: 
+                        <br>
+                        <textarea name="other" id="other" cols="20" rows="3" placeholder="Qual?"></textarea>
+                    </label>
+                </fieldset>
+                <input type="submit" value="Enviar" id="submit">
+            </form>
+        </section>
+
+        <footer id="rodape">
+            <p><p>Copyright 2022 - by Schaidt <br></p>
+        </footer>
+    </div>
+</body>
+</html>
